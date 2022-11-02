@@ -212,6 +212,7 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox2.Location = new System.Drawing.Point(1029, 119);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(288, 521);
@@ -220,6 +221,7 @@
             // 
             // DroneView
             // 
+            this.DroneView.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.DroneView.Location = new System.Drawing.Point(39, 119);
             this.DroneView.Name = "DroneView";
             this.DroneView.Size = new System.Drawing.Size(937, 502);
