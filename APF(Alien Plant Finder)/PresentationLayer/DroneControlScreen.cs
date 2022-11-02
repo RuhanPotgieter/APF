@@ -16,15 +16,21 @@ namespace APF_Alien_Plant_Finder_.PresentationLayer
         public DroneControlScreen()
         {
             Thread t = new Thread(new ThreadStart(StartForrm));
+            
             t.Start();
             Thread.Sleep(5000);
             InitializeComponent();
             t.Abort();
+           
+            
         }
 
         public void StartForrm()
         {
             Application.Run(new SplashScreen());
         }
+        
+        
     }
+    
 }
