@@ -63,6 +63,86 @@ namespace APF_Alien_Plant_Finder_.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ic_launcher_foreground_10 {
+            get {
+                object obj = ResourceManager.GetObject("ic_launcher_foreground_10", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic_launcher_foreground_11 {
+            get {
+                object obj = ResourceManager.GetObject("ic_launcher_foreground_11", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic_launcher_foreground_3 {
+            get {
+                object obj = ResourceManager.GetObject("ic_launcher_foreground_3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic_launcher_foreground_3_ek1 {
+            get {
+                object obj = ResourceManager.GetObject("ic_launcher_foreground_3_ek1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic_launcher_foreground_5 {
+            get {
+                object obj = ResourceManager.GetObject("ic_launcher_foreground_5", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic_launcher_foreground_7 {
+            get {
+                object obj = ResourceManager.GetObject("ic_launcher_foreground_7", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic_launcher_foreground_8 {
+            get {
+                object obj = ResourceManager.GetObject("ic_launcher_foreground_8", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic_launcher_foreground_9 {
+            get {
+                object obj = ResourceManager.GetObject("ic_launcher_foreground_9", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap LogoClear {
             get {
                 object obj = ResourceManager.GetObject("LogoClear", resourceCulture);

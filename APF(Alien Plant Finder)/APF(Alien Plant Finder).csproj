@@ -96,5 +96,29 @@
   <ItemGroup>
     <None Include="Resources\LogoClear.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_launcher_foreground_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_launcher_foreground_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_launcher_foreground_7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_launcher_foreground_8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_launcher_foreground_9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_launcher_foreground_10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_launcher_foreground_11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_launcher_foreground_3_ek1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
