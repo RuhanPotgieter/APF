@@ -121,8 +121,8 @@
   <data name="ic_launcher_foreground_10" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ic_launcher_foreground_10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ic_launcher_foreground_9" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ic_launcher_foreground_9.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ic_launcher_foreground_3_ek1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ic_launcher_foreground_3_ek1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ic_launcher_foreground_11" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ic_launcher_foreground_11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -136,13 +136,16 @@
   <data name="ic_launcher_foreground_5" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ic_launcher_foreground_5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ic_launcher_foreground_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ic_launcher_foreground_3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="LogoClear" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LogoClear.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ic_launcher_foreground_3_ek1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ic_launcher_foreground_3_ek1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ic_launcher_foreground_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ic_launcher_foreground_3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ic_launcher_foreground_9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ic_launcher_foreground_9.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8-multiply-60" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-multiply-60.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

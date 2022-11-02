@@ -30,7 +30,15 @@ namespace APF_Alien_Plant_Finder_.PresentationLayer
             Application.Run(new SplashScreen());
         }
 
-        
+        private void btn_Exit_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
     
 }

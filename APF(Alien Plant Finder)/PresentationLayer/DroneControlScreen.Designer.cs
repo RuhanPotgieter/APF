@@ -39,6 +39,8 @@
             this.btn_descend = new System.Windows.Forms.Button();
             this.btn_connecttoDrone = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_Exit = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.DroneView = new System.Windows.Forms.PictureBox();
@@ -55,7 +57,6 @@
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -168,12 +169,36 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(33)))), ((int)(((byte)(24)))));
+            this.panel1.Controls.Add(this.btn_Exit);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox15);
             this.panel1.Location = new System.Drawing.Point(-32, 1);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1432, 81);
             this.panel1.TabIndex = 12;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // btn_Exit
+            // 
+            this.btn_Exit.BackgroundImage = global::APF_Alien_Plant_Finder_.Properties.Resources.icons8_multiply_60;
+            this.btn_Exit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_Exit.Location = new System.Drawing.Point(1339, 0);
+            this.btn_Exit.Name = "btn_Exit";
+            this.btn_Exit.Size = new System.Drawing.Size(29, 29);
+            this.btn_Exit.TabIndex = 28;
+            this.btn_Exit.UseVisualStyleBackColor = true;
+            this.btn_Exit.Click += new System.EventHandler(this.btn_Exit_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F);
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label1.Location = new System.Drawing.Point(136, 17);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(401, 55);
+            this.label1.TabIndex = 27;
+            this.label1.Text = "Alien Plant Finder";
             // 
             // pictureBox15
             // 
@@ -331,17 +356,6 @@
             this.pictureBox1.TabIndex = 13;
             this.pictureBox1.TabStop = false;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F);
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(136, 17);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(401, 55);
-            this.label1.TabIndex = 27;
-            this.label1.Text = "Alien Plant Finder";
-            // 
             // DroneControlScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -429,5 +443,6 @@
         private System.Windows.Forms.PictureBox pictureBox14;
         private System.Windows.Forms.PictureBox pictureBox15;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btn_Exit;
     }
 }

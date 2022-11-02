@@ -120,5 +120,8 @@
   <ItemGroup>
     <None Include="Resources\ic_launcher_foreground_3_ek1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-multiply-60.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
