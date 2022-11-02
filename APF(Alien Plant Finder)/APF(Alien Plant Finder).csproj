@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BusinessLogicLayer\Tello.cs" />
     <Compile Include="PresentationLayer\DroneControlScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,6 +61,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="PresentationLayer\DroneControlScreen.resx">
+      <DependentUpon>DroneControlScreen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\SplashScreen.resx">
       <DependentUpon>SplashScreen.cs</DependentUpon>
     </EmbeddedResource>
@@ -87,7 +91,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="BusinessLogicLayer\" />
     <Folder Include="DataAccessLayer\" />
   </ItemGroup>
   <ItemGroup>
