@@ -182,7 +182,7 @@
             // 
             this.btn_Exit.BackgroundImage = global::APF_Alien_Plant_Finder_.Properties.Resources.icons8_multiply_60;
             this.btn_Exit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_Exit.Location = new System.Drawing.Point(1339, 0);
+            this.btn_Exit.Location = new System.Drawing.Point(1340, 0);
             this.btn_Exit.Name = "btn_Exit";
             this.btn_Exit.Size = new System.Drawing.Size(29, 29);
             this.btn_Exit.TabIndex = 28;
