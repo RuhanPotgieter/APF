@@ -42,7 +42,7 @@
             this.btn_Exit = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.plantinfo = new System.Windows.Forms.PictureBox();
             this.DroneView = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox14 = new System.Windows.Forms.PictureBox();
@@ -57,9 +57,10 @@
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btn_disconnect = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.plantinfo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DroneView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
@@ -114,7 +115,7 @@
             // 
             // btn_Scan
             // 
-            this.btn_Scan.Location = new System.Drawing.Point(1029, 647);
+            this.btn_Scan.Location = new System.Drawing.Point(1029, 627);
             this.btn_Scan.Name = "btn_Scan";
             this.btn_Scan.Size = new System.Drawing.Size(115, 53);
             this.btn_Scan.TabIndex = 6;
@@ -159,7 +160,7 @@
             // 
             // btn_connecttoDrone
             // 
-            this.btn_connecttoDrone.Location = new System.Drawing.Point(1029, 706);
+            this.btn_connecttoDrone.Location = new System.Drawing.Point(315, 627);
             this.btn_connecttoDrone.Name = "btn_connecttoDrone";
             this.btn_connecttoDrone.Size = new System.Drawing.Size(126, 50);
             this.btn_connecttoDrone.TabIndex = 11;
@@ -210,14 +211,14 @@
             this.pictureBox15.TabIndex = 26;
             this.pictureBox15.TabStop = false;
             // 
-            // pictureBox2
+            // plantinfo
             // 
-            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox2.Location = new System.Drawing.Point(1029, 119);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(288, 521);
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
+            this.plantinfo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.plantinfo.Location = new System.Drawing.Point(1029, 119);
+            this.plantinfo.Name = "plantinfo";
+            this.plantinfo.Size = new System.Drawing.Size(288, 502);
+            this.plantinfo.TabIndex = 1;
+            this.plantinfo.TabStop = false;
             // 
             // DroneView
             // 
@@ -358,12 +359,22 @@
             this.pictureBox1.TabIndex = 13;
             this.pictureBox1.TabStop = false;
             // 
+            // btn_disconnect
+            // 
+            this.btn_disconnect.Location = new System.Drawing.Point(447, 627);
+            this.btn_disconnect.Name = "btn_disconnect";
+            this.btn_disconnect.Size = new System.Drawing.Size(75, 50);
+            this.btn_disconnect.TabIndex = 26;
+            this.btn_disconnect.Text = "Disconnect";
+            this.btn_disconnect.UseVisualStyleBackColor = true;
+            // 
             // DroneControlScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.ClientSize = new System.Drawing.Size(1338, 773);
+            this.Controls.Add(this.btn_disconnect);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btn_connecttoDrone);
             this.Controls.Add(this.btn_descend);
@@ -375,7 +386,7 @@
             this.Controls.Add(this.btn_left);
             this.Controls.Add(this.btn_back);
             this.Controls.Add(this.btn_Up);
-            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.plantinfo);
             this.Controls.Add(this.DroneView);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox14);
@@ -396,7 +407,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.plantinfo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DroneView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
@@ -418,7 +429,7 @@
         #endregion
 
         private System.Windows.Forms.PictureBox DroneView;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox plantinfo;
         private System.Windows.Forms.Button btn_Up;
         private System.Windows.Forms.Button btn_back;
         private System.Windows.Forms.Button btn_left;
@@ -446,5 +457,6 @@
         private System.Windows.Forms.PictureBox pictureBox15;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_Exit;
+        private System.Windows.Forms.Button btn_disconnect;
     }
 }
