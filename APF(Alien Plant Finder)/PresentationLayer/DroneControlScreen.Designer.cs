@@ -166,6 +166,7 @@
             this.btn_connecttoDrone.TabIndex = 11;
             this.btn_connecttoDrone.Text = "Connect to Drone ";
             this.btn_connecttoDrone.UseVisualStyleBackColor = true;
+            this.btn_connecttoDrone.Click += new System.EventHandler(this.btn_connecttoDrone_Click);
             // 
             // panel1
             // 
@@ -177,7 +178,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1432, 81);
             this.panel1.TabIndex = 12;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // btn_Exit
             // 
@@ -427,19 +427,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox DroneView;
-        private System.Windows.Forms.PictureBox plantinfo;
-        private System.Windows.Forms.Button btn_Up;
-        private System.Windows.Forms.Button btn_back;
-        private System.Windows.Forms.Button btn_left;
-        private System.Windows.Forms.Button btn_right;
-        private System.Windows.Forms.Button btn_Scan;
-        private System.Windows.Forms.Button btn_rotateLeft;
-        private System.Windows.Forms.Button btn_rotateRight;
-        private System.Windows.Forms.Button btn_throttle;
-        private System.Windows.Forms.Button btn_descend;
-        private System.Windows.Forms.Button btn_connecttoDrone;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox3;
@@ -457,6 +444,18 @@
         private System.Windows.Forms.PictureBox pictureBox15;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_Exit;
-        private System.Windows.Forms.Button btn_disconnect;
+        public System.Windows.Forms.PictureBox DroneView;
+        public System.Windows.Forms.PictureBox plantinfo;
+        public System.Windows.Forms.Button btn_Up;
+        public System.Windows.Forms.Button btn_back;
+        public System.Windows.Forms.Button btn_left;
+        public System.Windows.Forms.Button btn_right;
+        public System.Windows.Forms.Button btn_Scan;
+        public System.Windows.Forms.Button btn_rotateLeft;
+        public System.Windows.Forms.Button btn_rotateRight;
+        public System.Windows.Forms.Button btn_throttle;
+        public System.Windows.Forms.Button btn_descend;
+        public System.Windows.Forms.Button btn_connecttoDrone;
+        public System.Windows.Forms.Button btn_disconnect;
     }
 }

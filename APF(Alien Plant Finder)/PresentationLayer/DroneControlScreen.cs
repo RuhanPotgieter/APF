@@ -8,11 +8,13 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using APF_Alien_Plant_Finder_.BusinessLogicLayer;
 
 namespace APF_Alien_Plant_Finder_.PresentationLayer
 {
     public partial class DroneControlScreen : Form
     {
+        TelloDroneCamera tdc = new TelloDroneCamera();
         public DroneControlScreen()
         {
             Thread t = new Thread(new ThreadStart(StartForrm));
@@ -21,6 +23,7 @@ namespace APF_Alien_Plant_Finder_.PresentationLayer
             Thread.Sleep(5000);
             InitializeComponent();
             t.Abort();
+            
            
             
         }
@@ -35,12 +38,10 @@ namespace APF_Alien_Plant_Finder_.PresentationLayer
             Environment.Exit(0);
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        private void btn_connecttoDrone_Click(object sender, EventArgs e)
         {
-
+            tdc.StartCamera();
         }
-
-        
     }
     
 }
