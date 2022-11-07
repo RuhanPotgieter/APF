@@ -53,7 +53,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BusinessLogicLayer\Models\BluetoothConnectivity.cs" />
-    <Compile Include="BusinessLogicLayer\Tello.cs" />
+    <Compile Include="BusinessLogicLayer\Models\TelloControls.cs" />
     <Compile Include="BusinessLogicLayer\Models\TelloDroneCamera.cs" />
     <Compile Include="BusinessLogicLayer\Models\WifiConnectivity.cs" />
     <Compile Include="PresentationLayer\DroneControlScreen.cs">

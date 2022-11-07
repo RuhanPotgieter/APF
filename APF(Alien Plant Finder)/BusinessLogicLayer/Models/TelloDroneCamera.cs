@@ -16,7 +16,7 @@ namespace APF_Alien_Plant_Finder_.BusinessLogicLayer
         
         public void Cameradisplay()
         {
-            //method of connecting a picture box to webcam   
+            //ip camera linking    
             streamvideo = new MJPEGStream("http://77.89.48.19:8000/cgi-bin/viewer/video.jpg?r=1667648901");
             streamvideo.NewFrame += GetNewFram;
         }
