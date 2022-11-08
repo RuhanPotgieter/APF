@@ -58,6 +58,7 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btn_disconnect = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.plantinfo)).BeginInit();
@@ -368,12 +369,24 @@
             this.btn_disconnect.Text = "Disconnect";
             this.btn_disconnect.UseVisualStyleBackColor = true;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label2.Location = new System.Drawing.Point(528, 629);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(112, 48);
+            this.label2.TabIndex = 27;
+            this.label2.Text = "Press Enter \r\nTo TakeOff";
+            // 
             // DroneControlScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.ClientSize = new System.Drawing.Size(1338, 773);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.btn_disconnect);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btn_connecttoDrone);
@@ -423,6 +436,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -457,5 +471,6 @@
         public System.Windows.Forms.Button btn_descend;
         public System.Windows.Forms.Button btn_connecttoDrone;
         public System.Windows.Forms.Button btn_disconnect;
+        private System.Windows.Forms.Label label2;
     }
 }

@@ -9,12 +9,13 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using APF_Alien_Plant_Finder_.BusinessLogicLayer;
+using TelloSharp;
 
 namespace APF_Alien_Plant_Finder_.PresentationLayer
 {
     public partial class DroneControlScreen : Form
     {
-        TelloDroneCamera tdc = new TelloDroneCamera();
+        WifiConnectivity wcty = new WifiConnectivity();
         public DroneControlScreen()
         {
             Thread t = new Thread(new ThreadStart(StartForrm));
@@ -40,8 +41,11 @@ namespace APF_Alien_Plant_Finder_.PresentationLayer
 
         private void btn_connecttoDrone_Click(object sender, EventArgs e)
         {
-            tdc.StartCamera();
+            wcty.Connect();
         }
+
+        
+
     }
     
 }

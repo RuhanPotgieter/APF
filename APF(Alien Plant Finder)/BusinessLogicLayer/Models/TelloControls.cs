@@ -24,11 +24,7 @@ namespace TelloSharp
             typeof(WifiConnectivity).GetMethod("Connect", BindingFlags.NonPublic | BindingFlags.Instance).Invoke(new WifiConnectivity(), null);
         }
 
-        public void Alerts()
-        {
-            
-           
-        }
+        
         public string Takeoff()
         {
             if (wcty.isFlying) return "Already Flying";
@@ -252,25 +248,7 @@ namespace TelloSharp
             missionPadId2 = Clamp(missionPadId2, 1, 8);
             return wcty.SendToDrone("jump " + " " + x.ToString() + " " + y.ToString() + " " + z.ToString() + " " + speed.ToString() + " " + yaw.ToString() + " " + missionPadId1.ToString() + " " + missionPadId2.ToString(), true);
         }
-        public string StreamOn()
-        {
-            wcty.videoServer = new UdpClient(wcty.vsPort);
-            wcty.streaming = true;
-            return wcty.SendToDrone("streamon", true);
-        }
-        public string StreamOff()
-        {
-            wcty.streaming = false;
-            wcty.videoServer.Close();
-            return wcty.SendToDrone("streamoff", true);
-        }
-        public byte[] GetVideoImage()
-        {
-            if (!wcty.streaming) return null;
-            IPEndPoint ep = new IPEndPoint(IPAddress.Parse("0.0.0.0"), wcty.vsPort);
-            return wcty.videoServer.Receive(ref ep);
-        }
-
+        
         public TelloControls() { }
     }
 
