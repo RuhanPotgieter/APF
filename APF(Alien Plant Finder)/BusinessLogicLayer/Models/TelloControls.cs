@@ -2,10 +2,9 @@
 using System;
 using System.Net;
 using System.Net.Sockets;
-using System.Text;
 using System.Reflection;
-using System.Security.Policy;
-using System.Windows.Forms;
+using System.Text;
+
 
 namespace TelloSharp
 {
@@ -109,12 +108,20 @@ namespace TelloSharp
         /// z is -500 to 500 |
         /// speed is 10 to 100 |
         /// </summary>
+        public static T Clamp<T>(this T val, T min, T max) where T : IComparable<T>
+        {
+            if (val.CompareTo(min) < 0) return min;
+            else if (val.CompareTo(max) > 0) return max;
+            else return val;
+        }
+        
         public string Go(int x, int y, int z, int speed)
         {
-            x = Math.Clamp(x, -500, 500);
-            y = Math.Clamp(y, -500, 500);
-            z = Math.Clamp(z, -500, 500);
-            speed = Math.Clamp(speed, 10, 100);
+            
+            x = Clamp(x,-500, 500);
+            y = Clamp(y, -500, 500);
+            z = Clamp(z, -500, 500);
+            speed = Clamp(speed, 10, 100);
             return wcty.SendToDrone("go " + x.ToString() + " " + y.ToString() + " " + z.ToString() + " " + speed.ToString(), true);
         }
         public string Stop()
@@ -133,13 +140,13 @@ namespace TelloSharp
         /// </summary>
         public string Curve(int x1, int y1, int z1, int x2, int y2, int z2, int speed)
         {
-            x1 = Math.Clamp(x1, -500, 500);
-            y1 = Math.Clamp(y1, -500, 500);
-            z1 = Math.Clamp(z1, -500, 500);
-            x2 = Math.Clamp(x2, -500, 500);
-            y2 = Math.Clamp(y2, -500, 500);
-            z2 = Math.Clamp(z2, -500, 500);
-            speed = Math.Clamp(speed, 10, 60);
+            x1 = Clamp(x1, -500, 500);
+            y1 = Clamp(y1, -500, 500);
+            z1 = Clamp(z1, -500, 500);
+            x2 = Clamp(x2, -500, 500);
+            y2 = Clamp(y2, -500, 500);
+            z2 = Clamp(z2, -500, 500);
+            speed = Clamp(speed, 10, 60);
             return wcty.SendToDrone("curve " + x1.ToString() + " " + y1.ToString() + " " + z1.ToString() + " " + x2.ToString() + " " + y2.ToString() + " " + z2.ToString() + " " + speed.ToString(), true);
         }
         public string SetSpeed(int speed)
@@ -155,10 +162,10 @@ namespace TelloSharp
         /// </summary>
         public void SendRcControl(int leftright, int forwardback, int updown, int yaw)
         {
-            int a = Math.Clamp(leftright, -100, 100);
-            int b = Math.Clamp(forwardback, -100, 100);
-            int c = Math.Clamp(updown, -100, 100);
-            int d = Math.Clamp(yaw, -100, 100);
+            int a = Clamp(leftright, -100, 100);
+            int b = Clamp(forwardback, -100, 100);
+            int c = Clamp(updown, -100, 100);
+            int d = Clamp(yaw, -100, 100);
             byte[] message = Encoding.UTF8.GetBytes("rc " + a.ToString() + " " + b.ToString() + " " + c.ToString() + " " + d.ToString());
             wcty.client.Send(message);
         }
@@ -201,13 +208,13 @@ namespace TelloSharp
         /// </summary>
         public string Curve(int x1, int y1, int z1, int x2, int y2, int z2, int speed, int missionPadId)
         {
-            x1 = Math.Clamp(x1, -500, 500);
-            y1 = Math.Clamp(y1, -500, 500);
-            z1 = Math.Clamp(z1, -500, 500);
-            x2 = Math.Clamp(x2, -500, 500);
-            y2 = Math.Clamp(y2, -500, 500);
-            z2 = Math.Clamp(z2, -500, 500);
-            speed = Math.Clamp(speed, 10, 60);
+            x1 = Clamp(x1, -500, 500);
+            y1 = Clamp(y1, -500, 500);
+            z1 = Clamp(z1, -500, 500);
+            x2 = Clamp(x2, -500, 500);
+            y2 = Clamp(y2, -500, 500);
+            z2 = Clamp(z2, -500, 500);
+            speed = Clamp(speed, 10, 60);
             return wcty.SendToDrone("curve " + x1.ToString() + " " + y1.ToString() + " " + z1.ToString() + " " + x2.ToString() + " " + y2.ToString() + " " + z2.ToString() + " " + speed.ToString() + " " + missionPadId.ToString(), true);
         }
 
@@ -220,10 +227,10 @@ namespace TelloSharp
         /// </summary>
         public string Go(int x, int y, int z, int speed, int missionPadId)
         {
-            x = Math.Clamp(x, -500, 500);
-            y = Math.Clamp(y, -500, 500);
-            z = Math.Clamp(z, -500, 500);
-            speed = Math.Clamp(speed, 10, 100);
+            x = Clamp(x, -500, 500);
+            y = Clamp(y, -500, 500);
+            z = Clamp(z, -500, 500);
+            speed = Clamp(speed, 10, 100);
             return wcty.SendToDrone("go " + x.ToString() + " " + y.ToString() + " " + z.ToString() + " " + speed.ToString() + " " + missionPadId.ToString(), true);
         }
 
@@ -237,12 +244,12 @@ namespace TelloSharp
         /// </summary>
         public string Jump(int x, int y, int z, int speed, int yaw, int missionPadId1, int missionPadId2)
         {
-            x = Math.Clamp(x, -500, 500);
-            y = Math.Clamp(y, -500, 500);
-            z = Math.Clamp(z, -500, 500);
-            speed = Math.Clamp(speed, 10, 100);
-            missionPadId1 = Math.Clamp(missionPadId1, 1, 8);
-            missionPadId2 = Math.Clamp(missionPadId2, 1, 8);
+            x = Clamp(x, -500, 500);
+            y = Clamp(y, -500, 500);
+            z = Clamp(z, -500, 500);
+            speed = Clamp(speed, 10, 100);
+            missionPadId1 = Clamp(missionPadId1, 1, 8);
+            missionPadId2 = Clamp(missionPadId2, 1, 8);
             return wcty.SendToDrone("jump " + " " + x.ToString() + " " + y.ToString() + " " + z.ToString() + " " + speed.ToString() + " " + yaw.ToString() + " " + missionPadId1.ToString() + " " + missionPadId2.ToString(), true);
         }
         public string StreamOn()
