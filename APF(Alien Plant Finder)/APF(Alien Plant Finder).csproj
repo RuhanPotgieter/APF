@@ -52,7 +52,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BusinessLogicLayer\Controllers\BluetoothConnectivity.cs" />
     <Compile Include="BusinessLogicLayer\Controllers\TelloControls.cs" />
     <Compile Include="BusinessLogicLayer\Controllers\TelloDroneCamera.cs" />
     <Compile Include="BusinessLogicLayer\Controllers\WifiConnectivity.cs" />
