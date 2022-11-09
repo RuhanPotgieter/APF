@@ -6,18 +6,12 @@ using System.Reflection;
 using System.Text;
 
 
-namespace TelloSharp
+namespace APF_Alien_Plant_Finder_.BusinessLogicLayer
 {
-    public class TelloControls 
+    public class TelloControls
     {
         WifiConnectivity wcty = new WifiConnectivity();
-        public enum FlipDirection
-        {
-            Forward,
-            Back,
-            Left,
-            Right
-        }
+     
        
 
         
@@ -69,31 +63,7 @@ namespace TelloSharp
         {
             return wcty.SendToDrone("ccw " + degrees.ToString(), true);
         }
-        public string Flip(FlipDirection direction)
-        {
-            string flipDir = "";
-            if (direction == FlipDirection.Forward)
-            {
-                flipDir = "f";
-            }
-            else if (direction == FlipDirection.Back)
-            {
-                flipDir = "b";
-            }
-            else if (direction == FlipDirection.Left)
-            {
-                flipDir = "l";
-            }
-            else if (direction == FlipDirection.Right)
-            {
-                flipDir = "r";
-            }
-            else
-            {
-                flipDir = "f";
-            }
-            return wcty.SendToDrone("flip " + flipDir, true);
-        }
+       
         /// <summary>
         /// | x is -500 to 500 |
         /// y is -500 to 500 |

@@ -55,9 +55,8 @@
     <Compile Include="BusinessLogicLayer\Controllers\TelloControls.cs" />
     <Compile Include="BusinessLogicLayer\Controllers\TelloDroneCamera.cs" />
     <Compile Include="BusinessLogicLayer\Controllers\WifiConnectivity.cs" />
-    <Compile Include="BusinessLogicLayer\Models\ILog.cs" />
-    <Compile Include="BusinessLogicLayer\Models\Log.cs" />
     <Compile Include="BusinessLogicLayer\Models\Tello.cs" />
+    <Compile Include="BusinessLogicLayer\Models\TelloHandler.cs" />
     <Compile Include="DataAccessLayer\MLConnection.cs" />
     <Compile Include="PresentationLayer\DroneControlScreen.cs">
       <SubType>Form</SubType>

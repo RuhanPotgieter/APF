@@ -42,7 +42,6 @@
             this.btn_Exit = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
-            this.plantinfo = new System.Windows.Forms.PictureBox();
             this.DroneView = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox14 = new System.Windows.Forms.PictureBox();
@@ -59,9 +58,14 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btn_disconnect = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.ol_DroneInfo = new System.Windows.Forms.Panel();
+            this.lbl_Height = new System.Windows.Forms.Label();
+            this.lb_BateryLevel = new System.Windows.Forms.Label();
+            this.lbl_Connected = new System.Windows.Forms.Label();
+            this.ol_PlantInfo = new System.Windows.Forms.Panel();
+            this.btn_streamCamera = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.plantinfo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DroneView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
@@ -76,6 +80,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.ol_DroneInfo.SuspendLayout();
             this.SuspendLayout();
             // 
             // btn_Up
@@ -165,7 +170,7 @@
             this.btn_connecttoDrone.Name = "btn_connecttoDrone";
             this.btn_connecttoDrone.Size = new System.Drawing.Size(126, 50);
             this.btn_connecttoDrone.TabIndex = 11;
-            this.btn_connecttoDrone.Text = "Connect to Drone ";
+            this.btn_connecttoDrone.Text = "Connect  ";
             this.btn_connecttoDrone.UseVisualStyleBackColor = true;
             this.btn_connecttoDrone.Click += new System.EventHandler(this.btn_connecttoDrone_Click);
             // 
@@ -211,15 +216,6 @@
             this.pictureBox15.Size = new System.Drawing.Size(86, 61);
             this.pictureBox15.TabIndex = 26;
             this.pictureBox15.TabStop = false;
-            // 
-            // plantinfo
-            // 
-            this.plantinfo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.plantinfo.Location = new System.Drawing.Point(1029, 119);
-            this.plantinfo.Name = "plantinfo";
-            this.plantinfo.Size = new System.Drawing.Size(288, 502);
-            this.plantinfo.TabIndex = 1;
-            this.plantinfo.TabStop = false;
             // 
             // DroneView
             // 
@@ -380,12 +376,74 @@
             this.label2.TabIndex = 27;
             this.label2.Text = "Press Enter \r\nTo TakeOff";
             // 
+            // ol_DroneInfo
+            // 
+            this.ol_DroneInfo.Controls.Add(this.lbl_Height);
+            this.ol_DroneInfo.Controls.Add(this.lb_BateryLevel);
+            this.ol_DroneInfo.Controls.Add(this.lbl_Connected);
+            this.ol_DroneInfo.Location = new System.Drawing.Point(1029, 119);
+            this.ol_DroneInfo.Name = "ol_DroneInfo";
+            this.ol_DroneInfo.Size = new System.Drawing.Size(267, 241);
+            this.ol_DroneInfo.TabIndex = 28;
+            // 
+            // lbl_Height
+            // 
+            this.lbl_Height.AutoSize = true;
+            this.lbl_Height.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.lbl_Height.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lbl_Height.Location = new System.Drawing.Point(16, 77);
+            this.lbl_Height.Name = "lbl_Height";
+            this.lbl_Height.Size = new System.Drawing.Size(82, 26);
+            this.lbl_Height.TabIndex = 33;
+            this.lbl_Height.Text = "altitude";
+            // 
+            // lb_BateryLevel
+            // 
+            this.lb_BateryLevel.AutoSize = true;
+            this.lb_BateryLevel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.lb_BateryLevel.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lb_BateryLevel.Location = new System.Drawing.Point(16, 137);
+            this.lb_BateryLevel.Name = "lb_BateryLevel";
+            this.lb_BateryLevel.Size = new System.Drawing.Size(81, 26);
+            this.lb_BateryLevel.TabIndex = 31;
+            this.lb_BateryLevel.Text = "Battery";
+            // 
+            // lbl_Connected
+            // 
+            this.lbl_Connected.AutoSize = true;
+            this.lbl_Connected.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.lbl_Connected.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lbl_Connected.Location = new System.Drawing.Point(16, 12);
+            this.lbl_Connected.Name = "lbl_Connected";
+            this.lbl_Connected.Size = new System.Drawing.Size(181, 26);
+            this.lbl_Connected.TabIndex = 30;
+            this.lbl_Connected.Text = "connection status";
+            // 
+            // ol_PlantInfo
+            // 
+            this.ol_PlantInfo.Location = new System.Drawing.Point(1029, 391);
+            this.ol_PlantInfo.Name = "ol_PlantInfo";
+            this.ol_PlantInfo.Size = new System.Drawing.Size(267, 230);
+            this.ol_PlantInfo.TabIndex = 29;
+            // 
+            // btn_streamCamera
+            // 
+            this.btn_streamCamera.Location = new System.Drawing.Point(1029, 686);
+            this.btn_streamCamera.Name = "btn_streamCamera";
+            this.btn_streamCamera.Size = new System.Drawing.Size(115, 53);
+            this.btn_streamCamera.TabIndex = 30;
+            this.btn_streamCamera.Text = "StreamVideo";
+            this.btn_streamCamera.UseVisualStyleBackColor = true;
+            // 
             // DroneControlScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.ClientSize = new System.Drawing.Size(1338, 773);
+            this.Controls.Add(this.btn_streamCamera);
+            this.Controls.Add(this.ol_PlantInfo);
+            this.Controls.Add(this.ol_DroneInfo);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btn_disconnect);
             this.Controls.Add(this.panel1);
@@ -399,7 +457,6 @@
             this.Controls.Add(this.btn_left);
             this.Controls.Add(this.btn_back);
             this.Controls.Add(this.btn_Up);
-            this.Controls.Add(this.plantinfo);
             this.Controls.Add(this.DroneView);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox14);
@@ -420,7 +477,6 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.plantinfo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DroneView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
@@ -435,6 +491,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.ol_DroneInfo.ResumeLayout(false);
+            this.ol_DroneInfo.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -459,7 +517,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_Exit;
         public System.Windows.Forms.PictureBox DroneView;
-        public System.Windows.Forms.PictureBox plantinfo;
         public System.Windows.Forms.Button btn_Up;
         public System.Windows.Forms.Button btn_back;
         public System.Windows.Forms.Button btn_left;
@@ -472,5 +529,11 @@
         public System.Windows.Forms.Button btn_connecttoDrone;
         public System.Windows.Forms.Button btn_disconnect;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel ol_DroneInfo;
+        private System.Windows.Forms.Label lbl_Connected;
+        private System.Windows.Forms.Panel ol_PlantInfo;
+        public System.Windows.Forms.Button btn_streamCamera;
+        private System.Windows.Forms.Label lbl_Height;
+        private System.Windows.Forms.Label lb_BateryLevel;
     }
 }
