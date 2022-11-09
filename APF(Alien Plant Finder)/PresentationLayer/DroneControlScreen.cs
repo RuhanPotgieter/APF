@@ -22,7 +22,8 @@ namespace APF_Alien_Plant_Finder_.PresentationLayer
     {
         WifiConnectivity wcty = new WifiConnectivity();
         TelloControls tcl = new TelloControls();
-        TelloHandler thr = new TelloHandler();
+        TelloHandler thdr = new TelloHandler();
+        Tello tlo = new Tello();
 
         public DroneControlScreen()
         {
@@ -57,13 +58,13 @@ namespace APF_Alien_Plant_Finder_.PresentationLayer
         private void btn_connecttoDrone_Click(object sender, EventArgs e)
         {
             wcty.Connect();
-            if (_videoStreamingWhenConnected) thr.StartOrStopVideoStreaming();
+            if (_videoStreamingWhenConnected) tlo.StartOrStopVideoStreaming();
             
         }
         
         private void DisplayStatus()
         {
-            if (thr.Connected)
+            if (tlo.Connected)
             {
                 btn_connecttoDrone.BackColor = Color.Green;
                 
@@ -71,7 +72,7 @@ namespace APF_Alien_Plant_Finder_.PresentationLayer
                 lbl_Height.Tag = _tello.DroneState<string>("h");
                 lb_BateryLevel.Tag = _tello.DroneState<string>("bat");
                 
-                if (wtcy.VideoStreaming ) btn_streamCamera.BackColor = Color.Green;
+                if (tlo.VideoStreaming ) btn_streamCamera.BackColor = Color.Green;
                 else btn_streamCamera.BackColor = Color.LightGray;
                 
             }
