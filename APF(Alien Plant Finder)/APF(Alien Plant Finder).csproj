@@ -52,10 +52,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BusinessLogicLayer\Models\BluetoothConnectivity.cs" />
-    <Compile Include="BusinessLogicLayer\Models\TelloControls.cs" />
-    <Compile Include="BusinessLogicLayer\Models\TelloDroneCamera.cs" />
-    <Compile Include="BusinessLogicLayer\Models\WifiConnectivity.cs" />
+    <Compile Include="BusinessLogicLayer\Controllers\BluetoothConnectivity.cs" />
+    <Compile Include="BusinessLogicLayer\Controllers\TelloControls.cs" />
+    <Compile Include="BusinessLogicLayer\Controllers\TelloDroneCamera.cs" />
+    <Compile Include="BusinessLogicLayer\Controllers\WifiConnectivity.cs" />
+    <Compile Include="BusinessLogicLayer\Models\ILog.cs" />
+    <Compile Include="BusinessLogicLayer\Models\Log.cs" />
+    <Compile Include="BusinessLogicLayer\Models\Tello.cs" />
     <Compile Include="DataAccessLayer\MLConnection.cs" />
     <Compile Include="PresentationLayer\DroneControlScreen.cs">
       <SubType>Form</SubType>

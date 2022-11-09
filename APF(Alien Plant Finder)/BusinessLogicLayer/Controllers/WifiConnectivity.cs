@@ -56,5 +56,7 @@ namespace APF_Alien_Plant_Finder_.BusinessLogicLayer
             streaming = false;
             isFlying = false;
         }
+
+
     }
 }

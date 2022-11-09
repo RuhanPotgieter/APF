@@ -8,7 +8,7 @@ using System.Text;
 
 namespace TelloSharp
 {
-    public class TelloControls
+    public class TelloControls 
     {
         WifiConnectivity wcty = new WifiConnectivity();
         public enum FlipDirection
@@ -18,11 +18,7 @@ namespace TelloSharp
             Left,
             Right
         }
-        internal static void Main(string[] args)
-        {
-            typeof(WifiConnectivity).GetMethod("SendToDrone", BindingFlags.NonPublic | BindingFlags.Instance).Invoke(new WifiConnectivity(), null);
-            typeof(WifiConnectivity).GetMethod("Connect", BindingFlags.NonPublic | BindingFlags.Instance).Invoke(new WifiConnectivity(), null);
-        }
+       
 
         
         public string Takeoff()
