@@ -6,6 +6,7 @@ using System.Net.Sockets;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace APF_Alien_Plant_Finder_.BusinessLogicLayer.Models
 {
@@ -169,7 +170,7 @@ namespace APF_Alien_Plant_Finder_.BusinessLogicLayer.Models
                     try
                     {
                         // sometimes Tello fail when query battery after cold start/boot
-                        Log.Info($"Connected to Tello: battery={Battery}");
+                        MessageBox.Show($"Connected to Tello: battery={Battery}");
                     }
                     catch { }
                     StartTelloStateTask();
@@ -409,7 +410,7 @@ namespace APF_Alien_Plant_Finder_.BusinessLogicLayer.Models
                 if (!_streaming) StreamOn();
                 if (_ffmpegProcess != null && !_ffmpegProcess.HasExited) _ffmpegProcess.Kill();
                 string msg = $"Saving photo to file: {fileName}";
-                Log.Action(msg);
+                MessageBox.Show(msg);
                 if (CommandCallback != null) CommandCallback(msg);
                 StartFFmpegProcess("-frames:v 1", fileName);
             }
@@ -477,7 +478,7 @@ namespace APF_Alien_Plant_Finder_.BusinessLogicLayer.Models
                 TelloResponse result = new TelloResponse();
                 try
                 {
-                    Log.Action($"Send message: {message}");
+                    MessageBox.Show($"Send message: {message}");
                     if (CommandCallback != null) CommandCallback(context + message);
                     _udpMessageClient.Connect(_telloIpAddress, _messageUdpPort);
                     Byte[] sendBytes = Encoding.ASCII.GetBytes(message);
@@ -491,23 +492,23 @@ namespace APF_Alien_Plant_Finder_.BusinessLogicLayer.Models
                         Byte[] receiveBytes = _udpMessageClient.Receive(ref _remoteMessageIpEndPoint);
                         string response = Encoding.ASCII.GetString(receiveBytes);
                         result.Response = response;
-                        Log.Info($"Received response: {response}");
+                        MessageBox.Show($"Received response: {response}");
                         if (CommandResultCallback != null) CommandResultCallback(message, response);
                         if (string.Equals(response, "error auto land", StringComparison.OrdinalIgnoreCase))
                         {
                             string msg = $"Tello error: {response}";
-                            Log.Error(msg);
+                            MessageBox.Show(msg);
                             throw new Exception(msg);
                         }
                         else if (string.Equals(response, "error motor stop", StringComparison.OrdinalIgnoreCase))
                         {
                             string msg = $"Tello error: {response}";
-                            Log.Error(msg);
+                            MessageBox.Show(msg);
                             throw new Exception(msg);
                         }
                         else if (string.Equals(response, "unknown command", StringComparison.OrdinalIgnoreCase))
                         {
-                            Log.Error($"Error: {response}");
+                            MessageBox.Show($"Error: {response}");
                         }
                         else if (string.IsNullOrEmpty(expectedResponse)) result.Ok = true;
                         else result.Ok = string.Equals(expectedResponse, result.Response, StringComparison.OrdinalIgnoreCase);
@@ -527,7 +528,7 @@ namespace APF_Alien_Plant_Finder_.BusinessLogicLayer.Models
                         result.ErrorCode = socketException.ErrorCode;
                     }
                     result.Exception = err.Message;
-                    Log.Error($"Exception: {err.ToString()}");
+                    MessageBox.Show($"Exception: {err.ToString()}");
                     if (CommandResultCallback != null) CommandResultCallback(message, err.Message);
                 }
                 return result;
@@ -542,13 +543,13 @@ namespace APF_Alien_Plant_Finder_.BusinessLogicLayer.Models
                 _udpStateClient.Client.ReceiveTimeout = 10000;
                 Task.Run(() =>
                 {
-                    Log.Action("Started task to update Tello state ...");
+                    MessageBox.Show("Started task to update Tello state ...");
                     while (_updateState)
                     {
                         UpdateTelloState();
                     }
                     _udpStateClient.Close();
-                    Log.Action("Stopped task to update Tello state.");
+                    MessageBox.Show("Stopped task to update Tello state.");
                 });
             }
 
@@ -603,7 +604,7 @@ namespace APF_Alien_Plant_Finder_.BusinessLogicLayer.Models
                 if (_ffmpegProcess != null && !_ffmpegProcess.HasExited) _ffmpegProcess.Kill();
                 //else
                 {
-                    Log.Action(context);
+                    MessageBox.Show(context);
                     if (CommandCallback != null) CommandCallback(context);
                     string args = string.Empty;
                     if (!string.IsNullOrEmpty(videoFile)) args = $"{videoFile} ";
@@ -640,7 +641,7 @@ namespace APF_Alien_Plant_Finder_.BusinessLogicLayer.Models
                     info.RedirectStandardOutput = true;
                     //info.WindowStyle = ProcessWindowStyle.Normal;
                 }
-                Log.Action($"Starting: ffmpeg {arguments}");
+                MessageBox.Show($"Starting: ffmpeg {arguments}");
                 _ffmpegProcess = Process.Start(info);
                 //_ffmpegProcess.WaitForExit();
             }
