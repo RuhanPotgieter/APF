@@ -200,7 +200,7 @@ namespace APF_Alien_Plant_Finder_.BusinessLogicLayer
             return wcty.SendToDrone("jump " + " " + x.ToString() + " " + y.ToString() + " " + z.ToString() + " " + speed.ToString() + " " + yaw.ToString() + " " + missionPadId1.ToString() + " " + missionPadId2.ToString(), true);
         }
         
-        public TelloControls() { }
+       
     }
 
 
