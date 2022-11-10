@@ -69,8 +69,8 @@ namespace APF_Alien_Plant_Finder_.PresentationLayer
                 btn_connecttoDrone.BackColor = Color.Green;
                 
                 lbl_Connected.Tag = "Connected";
-                lbl_Height.Tag = _tello.DroneState<string>("h");
-                lb_BateryLevel.Tag = _tello.DroneState<string>("bat");
+                lbl_Height.Tag = thdr.DroneState<string>("h");
+                lb_BateryLevel.Tag = thdr.DroneState<string>("bat");
                 
                 if (tlo.VideoStreaming ) btn_streamCamera.BackColor = Color.Green;
                 else btn_streamCamera.BackColor = Color.LightGray;

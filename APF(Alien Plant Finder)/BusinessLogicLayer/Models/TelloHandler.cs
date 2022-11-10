@@ -315,51 +315,7 @@ namespace APF_Alien_Plant_Finder_.BusinessLogicLayer.Models
                 return Rotate("ccw", degree);
             }
 
-            /// <summary>
-            /// send flip (left, right, forward, back) command to the drone
-            /// </summary>
-            /// <returns>returns true if the drone performs the action successfully</returns>
-            public bool Flip(string direction)
-            {
-                TelloResponse response = SendMessage($"flip {direction}", waitForResponse: true, timeOutMs: 5000);
-                return response.Ok;
-            }
-
-            /// <summary>
-            /// send FlipLeft command to the drone
-            /// </summary>
-            /// <returns>returns true if the drone performs the action successfully</returns>
-            public bool FlipLeft()
-            {
-                return Flip("l");
-            }
-
-            /// <summary>
-            /// send FlipRight command to the drone
-            /// </summary>
-            /// <returns>returns true if the drone performs the action successfully</returns>
-            public bool FlipRight()
-            {
-                return Flip("r");
-            }
-
-            /// <summary>
-            /// send FlipForward command to the drone
-            /// </summary>
-            /// <returns>returns true if the drone performs the action successfully</returns>
-            public bool FlipForward()
-            {
-                return Flip("f");
-            }
-
-            /// <summary>
-            /// send FlipBack command to the drone
-            /// </summary>
-            /// <returns>returns true if the drone performs the action successfully</returns>
-            public bool FlipBack()
-            {
-                return Flip("b");
-            }
+           
 
             /// <summary>
             /// Send RC control via four channels
