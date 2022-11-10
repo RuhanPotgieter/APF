@@ -155,16 +155,16 @@
             this.btn_throttle.Name = "btn_throttle";
             this.btn_throttle.Size = new System.Drawing.Size(126, 50);
             this.btn_throttle.TabIndex = 9;
-            this.btn_throttle.Text = "Throttle (Shift)";
+            this.btn_throttle.Text = "Rise(up arrow)";
             this.btn_throttle.UseVisualStyleBackColor = true;
             // 
             // btn_descend
             // 
             this.btn_descend.Location = new System.Drawing.Point(447, 683);
             this.btn_descend.Name = "btn_descend";
-            this.btn_descend.Size = new System.Drawing.Size(75, 50);
+            this.btn_descend.Size = new System.Drawing.Size(86, 50);
             this.btn_descend.TabIndex = 10;
-            this.btn_descend.Text = "Descend (CTRL)";
+            this.btn_descend.Text = "Descend (down arrow)";
             this.btn_descend.UseVisualStyleBackColor = true;
             // 
             // btn_connecttoDrone
@@ -363,7 +363,7 @@
             // 
             this.btn_disconnect.Location = new System.Drawing.Point(447, 627);
             this.btn_disconnect.Name = "btn_disconnect";
-            this.btn_disconnect.Size = new System.Drawing.Size(75, 50);
+            this.btn_disconnect.Size = new System.Drawing.Size(86, 50);
             this.btn_disconnect.TabIndex = 26;
             this.btn_disconnect.Text = "Disconnect";
             this.btn_disconnect.UseVisualStyleBackColor = true;
@@ -373,7 +373,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label2.Location = new System.Drawing.Point(528, 629);
+            this.label2.Location = new System.Drawing.Point(544, 629);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(112, 48);
             this.label2.TabIndex = 27;

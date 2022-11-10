@@ -88,7 +88,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="Content\CommandDictionary.xsd">
+    <None Include="BusinessLogicLayer\Content\CommandDictionary.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="packages.config" />
@@ -106,9 +106,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\CommandDictionary-1.3.0.0.xml" />
-    <Content Include="Content\CommandDictionary-2.0.0.0.xml" />
-    <Content Include="Content\TelloCommander.License.txt" />
+    <Content Include="BusinessLogicLayer\Content\CommandDictionary-1.3.0.0.xml" />
+    <Content Include="BusinessLogicLayer\Content\CommandDictionary-2.0.0.0.xml" />
+    <Content Include="BusinessLogicLayer\Content\TelloCommander.License.txt" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\LogoClear.png" />
