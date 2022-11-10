@@ -11,9 +11,9 @@ namespace APF_Alien_Plant_Finder_.BusinessLogicLayer
     public class TelloControls
     {
         WifiConnectivity wcty = new WifiConnectivity();
-     
-       
-
+        
+        
+        
         
         public string Takeoff()
         {
@@ -142,22 +142,7 @@ namespace APF_Alien_Plant_Finder_.BusinessLogicLayer
             string response = wcty.STDGR("battery?");
             return Int32.Parse(response);
         }
-        public string GetTime()
-        {
-            return wcty.STDGR("time?");
-        }
-        public string GetWifi()
-        {
-            return wcty.STDGR("wifi?");
-        }
-        public string GetSDK()
-        {
-            return wcty.STDGR("sdk?");
-        }
-        public string GetSerialNumber()
-        {
-            return wcty.STDGR("sn?");
-        }
+       
         /// <summary>
         /// | x1 is -500 to 500 |
         /// y1 is -500 to 500 |

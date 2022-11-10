@@ -313,51 +313,7 @@ namespace APF_Alien_Plant_Finder_.BusinessLogicLayer.Models
             return Rotate("ccw", degree);
         }
 
-        /// <summary>
-        /// send flip (left, right, forward, back) command to the drone
-        /// </summary>
-        /// <returns>returns true if the drone performs the action successfully</returns>
-        public bool Flip(string direction)
-        {
-            TelloResponse response = SendMessage($"flip {direction}", waitForResponse: true, timeOutMs: 5000);
-            return response.Ok;
-        }
-
-        /// <summary>
-        /// send FlipLeft command to the drone
-        /// </summary>
-        /// <returns>returns true if the drone performs the action successfully</returns>
-        public bool FlipLeft()
-        {
-            return Flip("l");
-        }
-
-        /// <summary>
-        /// send FlipRight command to the drone
-        /// </summary>
-        /// <returns>returns true if the drone performs the action successfully</returns>
-        public bool FlipRight()
-        {
-            return Flip("r");
-        }
-
-        /// <summary>
-        /// send FlipForward command to the drone
-        /// </summary>
-        /// <returns>returns true if the drone performs the action successfully</returns>
-        public bool FlipForward()
-        {
-            return Flip("f");
-        }
-
-        /// <summary>
-        /// send FlipBack command to the drone
-        /// </summary>
-        /// <returns>returns true if the drone performs the action successfully</returns>
-        public bool FlipBack()
-        {
-            return Flip("b");
-        }
+        
 
         /// <summary>
         /// Send RC control via four channels
@@ -413,45 +369,7 @@ namespace APF_Alien_Plant_Finder_.BusinessLogicLayer.Models
             StartFFmpegProcess("-frames:v 1", fileName);
         }
 
-        /// <summary>
-        /// start/stop recording a video asynchronously
-        /// </summary>
-        /// <param name="filePath">the file path/name for the video</param>
-        public void StartOrStopVideoRecording(string filePath)
-        {
-            if (VideoRecording) StopVideoRecording();
-            else StartVideoRecording(filePath);
-        }
-
-        /// <summary>
-        /// start recording a video asynchronously
-        /// </summary>
-        /// <param name="filePath">the file path/name for the video</param>
-        public void StartVideoRecording(string filePath)
-        {
-            if (!VideoRecording)
-            {
-                StartFFmpegVideo($"Saving video to file: {filePath}", filePath);
-                VideoRecording = true;
-            }
-        }
-
-        /// <summary>
-        /// stop the video recording
-        /// </summary>
-        public void StopVideoRecording()
-        {
-            if (VideoRecording)
-            {
-                StopFFmpegVideo();
-                if (CommandCallback != null) CommandCallback("Stopped video recording");
-                VideoRecording = false;
-                if (VideoStreaming)
-                {
-                    StartFFmpegVideo($"Re-starting video streaming", null);
-                }
-            }
-        }
+       
 
         /// <summary>
         /// start/stop stream video asynchronously

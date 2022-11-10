@@ -155,7 +155,7 @@
             this.btn_throttle.Name = "btn_throttle";
             this.btn_throttle.Size = new System.Drawing.Size(126, 50);
             this.btn_throttle.TabIndex = 9;
-            this.btn_throttle.Text = "Rise(up arrow)";
+            this.btn_throttle.Text = "Ascend(up arrow)";
             this.btn_throttle.UseVisualStyleBackColor = true;
             // 
             // btn_descend
@@ -468,7 +468,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label5.Location = new System.Drawing.Point(4, 26);
+            this.label5.Location = new System.Drawing.Point(5, 27);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(74, 26);
             this.label5.TabIndex = 36;
