@@ -130,6 +130,7 @@ namespace APF_Alien_Plant_Finder_.BusinessLogicLayer
             int d = Clamp(yaw, -100, 100);
             byte[] message = Encoding.UTF8.GetBytes("rc " + a.ToString() + " " + b.ToString() + " " + c.ToString() + " " + d.ToString());
             wcty.client.Send(message);
+            
         }
         public int GetSpeed()
         {
