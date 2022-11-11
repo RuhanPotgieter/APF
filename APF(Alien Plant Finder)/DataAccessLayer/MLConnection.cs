@@ -1,4 +1,6 @@
 ﻿using System;
+using Microsoft.ML.Data;
+using JupyterNetClient.Nbformat;
 
 namespace APF_Alien_Plant_Finder_
 {
