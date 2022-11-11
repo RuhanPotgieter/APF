@@ -26,7 +26,7 @@ namespace APF_Alien_Plant_Finder_.BusinessLogicLayer.Models
     /// <summary>
     /// Tello drone SDK in C#
     /// </summary>
-    public class Tello
+    public class Telloc
     {
         /// <summary>
         /// Tello's factory setting for IP address
@@ -51,7 +51,7 @@ namespace APF_Alien_Plant_Finder_.BusinessLogicLayer.Models
         /// <summary>
         /// constructor
         /// </summary>
-        public Tello(string ipAddress = TelloIPAddress)
+        public Telloc(string ipAddress = TelloIPAddress)
         {
             _telloIpAddress = ipAddress;
             _udpMessageClient = new UdpClient(_messageUdpPort);

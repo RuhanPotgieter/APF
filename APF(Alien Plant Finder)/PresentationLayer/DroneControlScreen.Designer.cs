@@ -59,14 +59,14 @@
             this.btn_disconnect = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.pl_DroneInfo = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.lbl_Height = new System.Windows.Forms.Label();
             this.lb_BateryLevel = new System.Windows.Forms.Label();
             this.lbl_Connected = new System.Windows.Forms.Label();
             this.pl_PlantInfo = new System.Windows.Forms.Panel();
             this.btn_streamCamera = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DroneView)).BeginInit();
@@ -130,6 +130,7 @@
             this.btn_Scan.TabIndex = 6;
             this.btn_Scan.Text = "Scan";
             this.btn_Scan.UseVisualStyleBackColor = true;
+            this.btn_Scan.Click += new System.EventHandler(this.btn_Scan_Click);
             // 
             // btn_rotateLeft
             // 
@@ -367,6 +368,7 @@
             this.btn_disconnect.TabIndex = 26;
             this.btn_disconnect.Text = "Disconnect";
             this.btn_disconnect.UseVisualStyleBackColor = true;
+            this.btn_disconnect.Click += new System.EventHandler(this.btn_disconnect_Click);
             // 
             // label2
             // 
@@ -391,6 +393,39 @@
             this.pl_DroneInfo.Name = "pl_DroneInfo";
             this.pl_DroneInfo.Size = new System.Drawing.Size(267, 241);
             this.pl_DroneInfo.TabIndex = 28;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.label5.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label5.Location = new System.Drawing.Point(5, 27);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(74, 26);
+            this.label5.TabIndex = 36;
+            this.label5.Text = "Status";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.label4.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label4.Location = new System.Drawing.Point(4, 125);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(81, 26);
+            this.label4.TabIndex = 35;
+            this.label4.Text = "Battery";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label3.Location = new System.Drawing.Point(3, 76);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(82, 26);
+            this.label3.TabIndex = 34;
+            this.label3.Text = "altitude";
             // 
             // lbl_Height
             // 
@@ -440,39 +475,7 @@
             this.btn_streamCamera.TabIndex = 30;
             this.btn_streamCamera.Text = "StreamVideo";
             this.btn_streamCamera.UseVisualStyleBackColor = true;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label3.Location = new System.Drawing.Point(3, 76);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(82, 26);
-            this.label3.TabIndex = 34;
-            this.label3.Text = "altitude";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.label4.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label4.Location = new System.Drawing.Point(4, 125);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(81, 26);
-            this.label4.TabIndex = 35;
-            this.label4.Text = "Battery";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.label5.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label5.Location = new System.Drawing.Point(5, 27);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(74, 26);
-            this.label5.TabIndex = 36;
-            this.label5.Text = "Status";
+            this.btn_streamCamera.Click += new System.EventHandler(this.btn_streamCamera_Click);
             // 
             // DroneControlScreen
             // 

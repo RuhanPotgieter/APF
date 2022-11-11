@@ -24,7 +24,7 @@ namespace APF_Alien_Plant_Finder_.BusinessLogicLayer
         public bool printResults = true;
         public string SendToDrone(string message, bool printresults)
         {
-            client.Send(Encoding.UTF8.GetBytes(message));
+           // client.Send(Encoding.UTF8.GetBytes(message));
             IPEndPoint remoteEndPoint = new IPEndPoint(IPAddress.Any, 8889);
             byte[] receivedResults = client.Receive(ref remoteEndPoint);
             string data = Encoding.UTF8.GetString(receivedResults);
@@ -33,7 +33,7 @@ namespace APF_Alien_Plant_Finder_.BusinessLogicLayer
         }
         public string STDGR(string message)
         {
-            client.Send(Encoding.UTF8.GetBytes(message));
+           // client.Send(Encoding.UTF8.GetBytes(message));
             IPEndPoint remoteEndPoint = new IPEndPoint(IPAddress.Any, 8889);
             byte[] receivedResults = client.Receive(ref remoteEndPoint);
             string data = Encoding.UTF8.GetString(receivedResults);
