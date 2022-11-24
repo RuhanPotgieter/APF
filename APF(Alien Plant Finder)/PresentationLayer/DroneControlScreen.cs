@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using APF_Alien_Plant_Finder_.BusinessLogicLayer;
 using APF_Alien_Plant_Finder_.PresentationLayer;
+using APF_Alien_Plant_Finder_.DataAccessLayer;
 using System.Windows;
 using System.Windows.Input;
 
@@ -28,7 +29,9 @@ namespace APF_Alien_Plant_Finder_.PresentationLayer
     public partial class DroneControlScreen : Form
     {
         WifiConnectivity wcty = new WifiConnectivity();
-        
+        TelloDroneCamera tdc = new TelloDroneCamera();
+        MLConnection mcs = new MLConnection();
+
         TelloHandler thdr = new TelloHandler();
         Telloc tlo = new Telloc();
 
@@ -64,8 +67,17 @@ namespace APF_Alien_Plant_Finder_.PresentationLayer
 
         private void btn_connecttoDrone_Click(object sender, EventArgs e)
         {
-            wcty.Connect();
-            if (_videoStreamingWhenConnected) tlo.StartOrStopVideoStreaming();
+            try
+            {
+                wcty.Connect();
+                if (_videoStreamingWhenConnected) tlo.StartOrStopVideoStreaming();
+            }
+            catch (System.Net.Sockets.SocketException)
+            {
+                MessageBox.Show("Drone not found. Please check your connection and try again.");
+                throw;
+            }
+           
             
         }
 
@@ -105,7 +117,7 @@ namespace APF_Alien_Plant_Finder_.PresentationLayer
         
         public void MyKeyDownEventHandler(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            if (e.Control && e.KeyCode == Keys.Enter)
             {
                 if (tlo.Connected)
 
@@ -114,63 +126,64 @@ namespace APF_Alien_Plant_Finder_.PresentationLayer
                 }
             }
             
-            else if (e.KeyCode == Keys.W)
+            else if (e.Control && e.KeyCode == Keys.W)
             {
                 if (tlo.Flying)
                 {
                     tlo.Forward(_speed);
                 }
             }
-            else if (e.KeyCode == Keys.D)
+            else if (e.Control && e.KeyCode == Keys.D)
             {
                 if (tlo.Flying)
                 {
                     tlo.Right(_speed);
                 }
             }
-            else if (e.KeyCode == Keys.A)
+            else if (e.Control && e.KeyCode == Keys.A)
             {
                 if (tlo.Flying)
                 {
                     tlo.Left(_speed);
                 }
             }
-            else if (e.KeyCode == Keys.S)
+            else if (e.Control && e.KeyCode == Keys.S)
             {
                 if (tlo.Flying)
                 {
                     tlo.Back(_speed);
                 }
             }
-            else if (e.KeyCode == Keys.Right)
+            else if (e.Control && e.KeyCode == Keys.Right)
             {
                 if (tlo.Flying)
                 {
                     tlo.Clockwise(_speed);
                 }
             }
-            else if (e.KeyCode == Keys.Left)
+            else if (e.Control && e.KeyCode == Keys.Left)
             {
                 if (tlo.Flying)
                 {
                     tlo.CounterClockwise(_speed);
                 }
             }
-            else if (e.KeyCode == Keys.Up)
+            else if (e.Control && e.KeyCode == Keys.Up)
             {
+                
                 if (tlo.Flying)
                 {
                     tlo.Up(_speed);
                 }
             }
-            else if (e.KeyCode == Keys.Down)
+            else if (e.Control && e.KeyCode == Keys.Down)
             {
                 if (tlo.Flying)
                 {
                     tlo.Down(_speed);
                 }
             }
-            else if (e.KeyCode == Keys.Space)
+            else if (e.Control && e.KeyCode == Keys.Space)
             {
                 if (tlo.Flying)
                 {
@@ -182,11 +195,13 @@ namespace APF_Alien_Plant_Finder_.PresentationLayer
         private void btn_Scan_Click(object sender, EventArgs e)
         {
             tlo.SavePhoto("Plantimage");
+            mcs.MLConnections();
         }
 
         private void btn_streamCamera_Click(object sender, EventArgs e)
         {
             tlo.StreamOn();
+            
         }
 
         private void btn_disconnect_Click(object sender, EventArgs e)

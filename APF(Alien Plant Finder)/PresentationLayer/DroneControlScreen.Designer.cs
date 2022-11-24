@@ -391,7 +391,7 @@
             this.pl_DroneInfo.Controls.Add(this.lbl_Connected);
             this.pl_DroneInfo.Location = new System.Drawing.Point(1029, 119);
             this.pl_DroneInfo.Name = "pl_DroneInfo";
-            this.pl_DroneInfo.Size = new System.Drawing.Size(267, 241);
+            this.pl_DroneInfo.Size = new System.Drawing.Size(267, 172);
             this.pl_DroneInfo.TabIndex = 28;
             // 
             // label5
@@ -462,9 +462,9 @@
             // 
             // pl_PlantInfo
             // 
-            this.pl_PlantInfo.Location = new System.Drawing.Point(1029, 391);
+            this.pl_PlantInfo.Location = new System.Drawing.Point(1029, 297);
             this.pl_PlantInfo.Name = "pl_PlantInfo";
-            this.pl_PlantInfo.Size = new System.Drawing.Size(267, 230);
+            this.pl_PlantInfo.Size = new System.Drawing.Size(267, 324);
             this.pl_PlantInfo.TabIndex = 29;
             // 
             // btn_streamCamera
