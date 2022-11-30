@@ -6,32 +6,63 @@ using System.Net.Sockets;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+using AForge;
 using AForge.Video;
+using AForge.Video.DirectShow;
 using APF_Alien_Plant_Finder_.PresentationLayer;
 
 namespace APF_Alien_Plant_Finder_.BusinessLogicLayer
 {
     internal class TelloDroneCamera
     {
-        WifiConnectivity wcty = new WifiConnectivity();
-        public string StreamOn()
+        FilterInfoCollection filterInfoCollection;
+        VideoCaptureDevice videoCaptureDevice;
+        
+        public void CameraSelectView()
         {
-            wcty.videoServer = new UdpClient(wcty.vsPort);
-            wcty.streaming = true;
-            return wcty.SendToDrone("streamon", true);
+            DroneControlScreen dcs = new DroneControlScreen();
+            filterInfoCollection = new FilterInfoCollection(FilterCategory.VideoInputDevice);
+            foreach (FilterInfo filterInfo in filterInfoCollection)
+                dcs.comboBox1.Items.Add(filterInfo.Name);
+            dcs.comboBox1.SelectedIndex = 0;
+            videoCaptureDevice = new VideoCaptureDevice();
         }
-        public string StreamOff()
+        
+        public void CameraOn()
         {
-            wcty.streaming = false;
-            wcty.videoServer.Close();
-            return wcty.SendToDrone("streamoff", true);
+            DroneControlScreen dcs = new DroneControlScreen();
+            videoCaptureDevice = new VideoCaptureDevice(filterInfoCollection[dcs.comboBox1.SelectedIndex].MonikerString);
+            videoCaptureDevice.NewFrame += Camera_On;
+            videoCaptureDevice.Start();
         }
-        public byte[] GetVideoImage()
+
+        private void Camera_On(object sender, NewFrameEventArgs eventArgs)
         {
-            if (!wcty.streaming) return null;
-            IPEndPoint ep = new IPEndPoint(IPAddress.Parse("0.0.0.0"), wcty.vsPort);
-            return wcty.videoServer.Receive(ref ep);
+            DroneControlScreen dcs = new DroneControlScreen();
+            dcs.DroneView.Image = (Bitmap)eventArgs.Frame.Clone();
+           
         }
+
+
+        //WifiConnectivity wcty = new WifiConnectivity();
+        //public string StreamOn()
+        //{
+        //    wcty.videoServer = new UdpClient(wcty.vsPort);
+        //    wcty.streaming = true;
+        //    return wcty.SendToDrone("streamon", true);
+        //}
+        //public string StreamOff()
+        //{
+        //    wcty.streaming = false;
+        //    wcty.videoServer.Close();
+        //    return wcty.SendToDrone("streamoff", true);
+        //}
+        //public byte[] GetVideoImage()
+        //{
+        //    if (!wcty.streaming) return null;
+        //    IPEndPoint ep = new IPEndPoint(IPAddress.Parse("0.0.0.0"), wcty.vsPort);
+        //    return wcty.videoServer.Receive(ref ep);
+        //}
 
         //    MJPEGStream streamvideo;
 
@@ -61,8 +92,8 @@ namespace APF_Alien_Plant_Finder_.BusinessLogicLayer
         //    {
         //        streamvideo.Stop();
         //    }
-        
-     
+
+
     }
         
 }

@@ -67,6 +67,8 @@
             this.lbl_Connected = new System.Windows.Forms.Label();
             this.pl_PlantInfo = new System.Windows.Forms.Panel();
             this.btn_streamCamera = new System.Windows.Forms.Button();
+            this.CapturedFrame = new System.Windows.Forms.PictureBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DroneView)).BeginInit();
@@ -84,6 +86,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pl_DroneInfo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CapturedFrame)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_Up
@@ -176,7 +179,6 @@
             this.btn_connecttoDrone.TabIndex = 11;
             this.btn_connecttoDrone.Text = "Connect  ";
             this.btn_connecttoDrone.UseVisualStyleBackColor = true;
-            this.btn_connecttoDrone.Click += new System.EventHandler(this.btn_connecttoDrone_Click);
             // 
             // panel1
             // 
@@ -224,9 +226,9 @@
             // DroneView
             // 
             this.DroneView.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.DroneView.Location = new System.Drawing.Point(39, 119);
+            this.DroneView.Location = new System.Drawing.Point(39, 196);
             this.DroneView.Name = "DroneView";
-            this.DroneView.Size = new System.Drawing.Size(937, 502);
+            this.DroneView.Size = new System.Drawing.Size(531, 425);
             this.DroneView.TabIndex = 0;
             this.DroneView.TabStop = false;
             // 
@@ -368,7 +370,6 @@
             this.btn_disconnect.TabIndex = 26;
             this.btn_disconnect.Text = "Disconnect";
             this.btn_disconnect.UseVisualStyleBackColor = true;
-            this.btn_disconnect.Click += new System.EventHandler(this.btn_disconnect_Click);
             // 
             // label2
             // 
@@ -383,6 +384,7 @@
             // 
             // pl_DroneInfo
             // 
+            this.pl_DroneInfo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pl_DroneInfo.Controls.Add(this.label5);
             this.pl_DroneInfo.Controls.Add(this.label4);
             this.pl_DroneInfo.Controls.Add(this.label3);
@@ -462,6 +464,7 @@
             // 
             // pl_PlantInfo
             // 
+            this.pl_PlantInfo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pl_PlantInfo.Location = new System.Drawing.Point(1029, 297);
             this.pl_PlantInfo.Name = "pl_PlantInfo";
             this.pl_PlantInfo.Size = new System.Drawing.Size(267, 324);
@@ -477,12 +480,31 @@
             this.btn_streamCamera.UseVisualStyleBackColor = true;
             this.btn_streamCamera.Click += new System.EventHandler(this.btn_streamCamera_Click);
             // 
+            // CapturedFrame
+            // 
+            this.CapturedFrame.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.CapturedFrame.Location = new System.Drawing.Point(586, 196);
+            this.CapturedFrame.Name = "CapturedFrame";
+            this.CapturedFrame.Size = new System.Drawing.Size(413, 425);
+            this.CapturedFrame.TabIndex = 31;
+            this.CapturedFrame.TabStop = false;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(39, 160);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(216, 21);
+            this.comboBox1.TabIndex = 32;
+            // 
             // DroneControlScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.ClientSize = new System.Drawing.Size(1338, 773);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.CapturedFrame);
             this.Controls.Add(this.btn_streamCamera);
             this.Controls.Add(this.pl_PlantInfo);
             this.Controls.Add(this.pl_DroneInfo);
@@ -516,6 +538,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "DroneControlScreen";
             this.Text = "DroneControlScreen";
+            this.Load += new System.EventHandler(this.DroneControlScreen_Load_1);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
@@ -535,6 +558,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pl_DroneInfo.ResumeLayout(false);
             this.pl_DroneInfo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CapturedFrame)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -580,5 +604,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
+        public System.Windows.Forms.PictureBox CapturedFrame;
+        public System.Windows.Forms.ComboBox comboBox1;
     }
 }
