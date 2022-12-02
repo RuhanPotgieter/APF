@@ -686,7 +686,7 @@
     <Content Include="DataAccessLayer\Lib\_strptime.py" />
     <Content Include="DataAccessLayer\Lib\_threading_local.py" />
     <Content Include="DataAccessLayer\Lib\_weakrefset.py" />
-    <Content Include="DataAccessLayer\Lib\__future__.py" />
+    <Content Include="DataAccessLayer\__future__.py" />
     <Content Include="DataAccessLayer\Lib\__phello__.foo.py" />
   </ItemGroup>
   <ItemGroup>

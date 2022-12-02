@@ -21,8 +21,14 @@ namespace APF_Alien_Plant_Finder_.DataAccessLayer
         //    object method = op.GetMember(instance, "returnPrediction");
         //    string result = (string)op.Call(method, img);
         //}
-        
+
 
 
     }
+
+
+
+
+
 }
+

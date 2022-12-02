@@ -260,13 +260,15 @@ namespace APF_Alien_Plant_Finder_.PresentationLayer
         private void btn_Scan_Click(object sender, EventArgs e)
         {
             CapturedFrame.Image = DroneView.Image;
-            string fileN = @"S:\plantimages\Plantimage.jpg";
+            string fileN = @"S:\\PRJ_Project_2022\APF\Plantimage.jpg";
             var bitmap = new Bitmap(CapturedFrame.Width, CapturedFrame.Height);
             CapturedFrame.DrawToBitmap(bitmap, CapturedFrame.ClientRectangle);
             System.Drawing.Imaging.ImageFormat imageformat = null;
             imageformat = System.Drawing.Imaging.ImageFormat.Jpeg;
 
             bitmap.Save(fileN);
+
+            
         }
 
 
